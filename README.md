@@ -82,6 +82,14 @@ Make sure to deploy the output of `bun run build`
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
+## Bun
+
+Bun support is added throughout the template:
+
+- npm commands were replaced with the corresponding ones in Bun
+- The entry.server.tsx file was exposed and modified to not use the React renderToPipeableStream function which is specific to Node.js, and to use renderToReadableStream which renders to a Readable Web Stream
+- The Dockerfile was modified to use Bun commands to install the necessary packages, build and run the application
+
 ---
 
 Built with ❤️ using React Router.
